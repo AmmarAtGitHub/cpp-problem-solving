@@ -1,34 +1,57 @@
 /*
-Problem Goal:
+===============================================================================
+Problem: Monthly Calendar Generator
+===============================================================================
+
+Goal
+----
+Create a C++ program that generates and displays a formatted calendar
+for a given month and year.
+
+Requirements
+------------
+- Handle all 12 months
+- Correctly detect leap years
+- February must have 29 days during leap years
+
+Concepts Practiced
+------------------
+- Divide and conquer
+- Function design
+- Leap year logic
+- Gregorian calendar calculation
+- Output formatting
+
+Program Flow
+------------
+1. Read a year from the user
+2. Read a month from the user
+3. Determine leap year
+4. Calculate days in month
+5. Determine starting weekday
+6. Print formatted calendar
+
+Example Input
 -------------
-Create a program that generates and displays a calendar
-for a specific month of a given year.
+Year  : 2000
+Month : 4
 
-The program must correctly handle:
-- All 12 months of the year
-- Leap years (February having 29 days)
+Example Output
+--------------
 
-Concepts Practiced:
--------------------
-- Divide and conquer approach (breaking the problem into smaller functions)
-- Function design and reuse
-- Leap year calculation logic
-- Gregorian calendar day calculation
-- Formatting output using i/o manipulators (setw, alignment)
-- Basic input/output in C++
+_______________April_______________
+Sun  Mon  Tue  Wed Thur  Fri  Sat
+                              1
+2    3    4    5    6    7    8
+9    10   11   12   13   14   15
+16   17   18   19   20   21   22
+23   24   25   26   27   28   29
+30
 
-Program Flow:
--------------
-1. Read a year from the user.
-2. Read a month from the user.
-3. Determine if the given year is a leap year.
-4. Calculate the number of days in the selected month.
-5. Determine the day of the week the month starts on.
-6. Print a formatted calendar showing:
-   - Month name
-   - Days of the week (Sun–Sat)
-   - All days of the selected month aligned correctly.
+===============================================================================
 */
+
+
 #include <iostream>
 #include <vector>
 #include <string>
