@@ -150,7 +150,7 @@ void PrintMonthDays(short month, short year) {
 
 
 
-//procedure to print month table (frame)
+//procedure to prin the month header and the days of the given month and year
 void MonthTable(short month, short year) {
 	cout << "_______________" << MonthName(month) << "_______________" << endl;
 	PrintMonthDays(month, year);
