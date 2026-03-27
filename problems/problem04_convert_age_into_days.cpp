@@ -140,16 +140,20 @@ bool IsDate1BeforeDate2(stDate Date1, stDate Date2)
 			Date2.Month ? Date1.Day < Date2.Day : false)) : false);
 }
 
+//function to check if the year is leap year
 bool IsLastDayInMonth(stDate Date)
 {
 	return (Date.Day == NumberOfDaysInAMonth(Date.Month,
 		Date.Year));
 }
+
+//function to check if the month is the last month in the year
 bool IsLastMonthInYear(short Month)
 {
 	return (Month == 12);
 }
 
+//function to increase the date by one day
 stDate IncreaseDateByOneDay(stDate Date)
 {
 	if (IsLastDayInMonth(Date))
@@ -172,6 +176,8 @@ stDate IncreaseDateByOneDay(stDate Date)
 	}
 	return Date;
 }
+
+//function to calculate the difference in days between two dates
 int GetDifferenceInDays(stDate Date1, stDate Date2, bool IncludeEndDay = false)
 {
 	int Days = 0;
@@ -183,15 +189,7 @@ int GetDifferenceInDays(stDate Date1, stDate Date2, bool IncludeEndDay = false)
 	return IncludeEndDay ? ++Days : Days;
 }
 
-// Get difference between two dates
-int GetDifferenceInDays(stDate d1, stDate d2)
-{
-    int days1 = CalculateDaysInYear(d1);
-    int days2 = CalculateDaysInYear(d2);
-
-    return abs(days2 - days1);
-}
-
+//function to get system date 
 stDate GetSystemDate()
 {
 	stDate Date;
@@ -205,7 +203,6 @@ stDate GetSystemDate()
 
 int main() {
 	stDate Date1 = ReadFullDate();
-	//here we enter the current date or read it from system
 	stDate Date2 = GetSystemDate();
 	cout << "Your age is in days is: " << GetDifferenceInDays(Date1, Date2, true);
 
