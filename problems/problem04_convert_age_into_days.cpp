@@ -68,14 +68,6 @@ Your age in days is: 9500 (example)
 
 using namespace std;
 
-//divide and conquer: Requirements
-//function to read year
-//function to read month
-//function to read day
-//function to check if the year is leap year
-
-
-
 //structure to hold the date
 struct stDate {
 	short Year;
